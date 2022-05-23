@@ -7,13 +7,9 @@ export const ParticlesBackgound = () => {
      await loadFull(main);
   };
 
-  const particlesLoaded = (container:any) => {
-  };
- 
   return <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
       options={
         {
   autoPlay: true,
@@ -51,12 +47,6 @@ export const ParticlesBackgound = () => {
         enable: false,
         mode: []
       },
-      onDiv: {
-        selectors: [],
-        enable: false,
-        mode: [],
-        type: "circle"
-      },
       onHover: {
         enable: false,
         mode: [],
@@ -72,7 +62,6 @@ export const ParticlesBackgound = () => {
       attract: {
         distance: 200,
         duration: 0.4,
-        easing: "ease-out-quad",
         factor: 1,
         maxSpeed: 50,
         speed: 1
@@ -139,16 +128,6 @@ export const ParticlesBackgound = () => {
         factor: 100,
         speed: 1,
         maxSpeed: 50,
-        easing: "ease-out-quad",
-        divs: {
-          distance: 200,
-          duration: 0.4,
-          factor: 100,
-          speed: 1,
-          maxSpeed: 50,
-          easing: "ease-out-quad",
-          selectors: []
-        }
       },
       slow: {
         factor: 3,
@@ -237,7 +216,6 @@ export const ParticlesBackgound = () => {
       }
     },
     destroy: {
-      mode: "none",
       split: {
         count: 1,
         factor: {
