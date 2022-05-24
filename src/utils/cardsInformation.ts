@@ -53,16 +53,15 @@ const cards = [
 
 export function pairOfCards() {
     let newArray: { data: string; imgUrl: string; alt: string; }[] = [];
-    const oldArray = cards.sort(() => Math.random() - 0.5);
-    let counter = 0;
 
-    for (const card of oldArray) {
+    for (let count = 0; count < 6;) {
+        let card = cards[Math.floor(Math.random() * 10)]
         if (!newArray.includes(card)) {
             newArray.push(card)
-            ++counter;
+            ++count;
         }
 
-        if (counter === 6) break;
+        if (count === 6) break;
     }
 
     return [...newArray, ...newArray].sort(() => Math.random() - 0.5)
