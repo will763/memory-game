@@ -8,8 +8,4 @@ export const Main = styled.main`
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-
-    .flip {
-      transform:rotateY(180deg) ;
-    }
 `;

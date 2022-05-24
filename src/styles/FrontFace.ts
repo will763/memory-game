@@ -11,6 +11,4 @@ export const FrontFace = styled.img`
   backface-visibility: hidden; 
   pointer-events:none ;
 
-  transform: rotateY(180deg) ;
-
 `

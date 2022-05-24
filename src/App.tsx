@@ -1,11 +1,10 @@
+import { useState, useEffect } from "react"
 import { Card } from "./components/Card"
 import { Main } from "./styles/Main"
+import { EndGame, Home } from "./components/StageGame"
 
 import { pairOfCards } from "./utils/cardsInformation"
-import { useState, useEffect } from "react"
-import { playAllCards, stopAllCards } from "./utils/handleStsteCards"
 import { engine } from "./utils/engineToWin"
-import { EndGame, Home } from "./components/StageGame"
 
 interface Props {
   data: string;
@@ -39,7 +38,7 @@ export const App = () => {
 
   useEffect(() => {
     if (firstChoice && secondChoice) {
-      const result = engine(firstChoice, secondChoice, stopAllCards, clearState, playAllCards); 
+      const result = engine(firstChoice, secondChoice, clearState); 
       if (typeof(result) === "number"){setWin(win => win! + 1)} 
     }
   }, [firstChoice, secondChoice]);

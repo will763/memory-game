@@ -1,15 +1,16 @@
-export const engine = (firstChoice: HTMLDivElement, secondChoice: HTMLDivElement, stopAllCards: () => void, clearState: () => void, playAllCards: () => void,) => {
+import { delayForMatch, playAllCards, stopAllCards } from "./handleStsteCards";
+
+export const engine = (firstChoice: HTMLDivElement, secondChoice: HTMLDivElement, clearState: () => void) => {
     stopAllCards();
     if (firstChoice?.dataset.card === secondChoice?.dataset.card) {
-        firstChoice.dataset.match = "matched";
-        secondChoice.dataset.match = "matched";
+        delayForMatch(firstChoice, secondChoice);
         clearState();
         playAllCards();
         return 1;
-    } else if (firstChoice.classList.contains("flip") && secondChoice.classList.contains("flip")) {
+    } else {
         const intervalId = setTimeout(() => {
-            firstChoice.classList.remove("flip");
-            secondChoice.classList.remove("flip");
+            firstChoice.classList.add("flip");
+            secondChoice.classList.add("flip");
             clearState();
             playAllCards()
         }, 1500);

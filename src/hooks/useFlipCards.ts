@@ -1,14 +1,23 @@
 import { useEffect } from "react";
+import { playAllCards, stopAllCards } from "../utils/handleStsteCards";
 
 export const useFlipCards = (win: number | null) => {
     useEffect(() => {
         if (win === 0) {
-            const cards = document.querySelectorAll(".flip");
+            const cards = document.querySelectorAll(".cards");
+            stopAllCards(cards);
+
             const id = setTimeout(() => {
-                for (const card of cards) {
-                    card.classList.contains("flip") && card.classList.remove('flip')
+                for (let card of cards) {
+                    card.classList.add('flip')
+                    const el = card as HTMLDivElement;
+                    if (el.dataset.match === "matched") {
+                        el.dataset.match = "false";
+                        el.style.pointerEvents = 'auto';
+                    }
                 }
-            }, 3500);
+                playAllCards(cards);
+            }, 4000);
 
             return () => clearTimeout(id);
         }

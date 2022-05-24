@@ -1,12 +1,35 @@
 import styled, { keyframes } from "styled-components";
 
 const matched = keyframes`
-  from {
-    transform: scale(.8);
+  10% {
+    transform: scale(1);
   } 
 
-  to {
+  25% {
+    transform: scale(.8);
+  }
+
+  50% {
+    transform: scale(.9);
+  }
+
+  75% {
+    transform: scale(.8);
+  }
+
+  100% {
     transform: scale(1);
+  }
+`;
+
+const ray = keyframes`
+  to {
+    top:0% ;
+  } 
+
+  from {
+    top: 85% ;
+    opacity:1 ;
   }
 `;
 
@@ -18,14 +41,28 @@ export const Div = styled.div`
     position: relative;
     box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     cursor: pointer;
-    transform: scale(1);
     transform-style: preserve-3d;
-    transition: all .5s ease;
+    transition: transform .5s ease;
     border-radius: 5px;
 
-    &:active {
-      transform: scale(0.97);
-      transition: transform .2s;
+    &.flip {
+      transform:rotateY(180deg) ;
+    }
+
+    &[data-match="matched"] {
+       animation: ${matched} 1s linear 1;
+
+       &::before {
+         content:'';
+         opacity:0 ;
+         position: absolute ;
+         width:100% ;
+         height:2rem ;
+         background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,.5),rgba(255,255,255,.0));
+         top: 85%;
+         z-index:1 ;
+         animation: ${ray} 500ms linear 1s 1;
+       }
     }
 
 `

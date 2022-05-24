@@ -10,4 +10,6 @@ export const BackFace = styled.img`
   backface-visibility: hidden; 
   object-fit:cover;
   pointer-events:none;
+
+  transform:rotateY(180deg)
 `
