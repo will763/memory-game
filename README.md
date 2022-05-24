@@ -13,6 +13,20 @@ option to reset the game.
 
 You may also notice that upon restarting the game the characters on the cards change.
 
+## Screenshot 📸
+
+![Captura de tela de 2022-05-24 10-45-50](https://user-images.githubusercontent.com/66382974/170050881-b6a6c1e3-4a48-490f-99ca-418d84530e01.png)
+
+
+## How To Play 🎮
+
+ 1. on the home page click on new game. 
+ 2. wait a certain time and pay attention to the cards.
+ 3. memorize where the pair of each card is.
+ 4. match the cards with their corresponding pair.
+ 5. by making all pairs you win the game.
+ 6. you can restart the game by clicking on new game on the congratulations screen.
+
 ## Built with 🏛️ 
 - ReactJs ✔️
 - ViteJs ✔️
