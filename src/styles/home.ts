@@ -10,7 +10,7 @@ position: absolute;
 z-index:1 ;
 left:0;
 top:0 ;
-background-color: rgba(0,0,0,0);
+background-color: rgba(0,0,0);
 width:100vw;
 height:100% ;
 transition:${({ start }) => start === 6 ? 'transform 1s linear 2s' : 'transform 1s linear'};
