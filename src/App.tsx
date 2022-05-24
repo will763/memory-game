@@ -28,14 +28,15 @@ export const App = () => {
   }
 
   function startGame() {
+    setArray(pairOfCards);
     setWin(0);
-    setArray(pairOfCards)
   }
 
   function clearState() {
     setFirstChoice(null);
     setSecondChoice(null);
   }
+
   useEffect(() => {
     if (firstChoice && secondChoice) {
       const result = engine(firstChoice, secondChoice, stopAllCards, clearState, playAllCards); 
