@@ -17,7 +17,7 @@ export const useFlipCards = (win: number | null) => {
                     }
                 }
                 playAllCards(cards);
-            }, 4000);
+            }, 5000);
 
             return () => clearTimeout(id);
         }

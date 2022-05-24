@@ -17,19 +17,6 @@ export const Card = ({ data, imgUrl, alt, handleChoice, win }: Props) => {
 
     useFlipCards(win);
 
-    // useEffect(()=> {
-    //     if (win === 6) {
-    //     const cards = document.querySelectorAll('.cards');
-    //     for (const card of cards) {
-    //       const el = card as HTMLDivElement;
-    //         if (el.dataset.match === "matched") {
-    //             el.dataset.match = "false";
-    //             el.style.pointerEvents = 'auto';
-    //         }
-    //     }
-    //   }
-    // },[win]);
-
     function handleClick(e: React.MouseEvent<HTMLDivElement>) {
         const el = e.target as HTMLDivElement;
         el.classList.remove('flip');
