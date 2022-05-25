@@ -2,7 +2,7 @@
 
 This project was developed during the TQI Fullstack Developer bootcamp on 
 the Digital innovation one platform. The initial project was
-the memory game made with vanilhajs and with super mario theme,
+the memory game made with vanillaJS and with super mario theme,
 it contained only one page, in which the cards were presented for a certain time and
 then they all turn, from there you have to find the cards that correspond by clicking on they.
 
