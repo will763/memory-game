@@ -10,7 +10,11 @@ position: absolute;
 z-index:1 ;
 left:0;
 top:0 ;
+<<<<<<< HEAD
 background-color: rgba(0,0,0,.8);
+=======
+background-color: rgba(0,0,0,0.8);
+>>>>>>> 0fbef95 (style)
 width:100vw;
 height:100% ;
 transition:${({ start }) => start === 6 ? 'transform 1s linear 2s' : 'transform 1s linear'};
