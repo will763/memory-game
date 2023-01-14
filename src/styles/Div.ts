@@ -39,7 +39,7 @@ export const Div = styled.div`
     width: calc(25% - 10px);
     margin: 5px;
     position: relative;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px rgba(0,0,0);
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform .5s ease;
